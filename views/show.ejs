@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head')%>
+<body>
+    <h1>Show Page for Single Flight</h1>
+    <a  class='btn btn-primary' href='/<%=data._id%>/edit'>Edit</a>
+    <table>
+        <tr>
+            <th>Airline</th>
+            <td>
+                <%= data.airline %>
+            </td>
+        </tr>
+        <tr>
+            <th>Airport</th>
+            <td>
+                <%= data.airport %>
+            </td>
+        </tr>
+        <tr>
+            <th>Flight No</th>
+            <td>
+                <%= data.flightNo %>
+            </td>
+        </tr>
+        <tr>
+            <th>Departs On</th>
+            <td>
+                <%= data.departs %>
+            </td>
+        </tr>
+    </table>
+     <form action ="/<%=data._id%>?_method=DELETE" method="POST">
+        <input class='btn btn-danger' type="submit" value="Delete"/>
+     </form>
+     <%- include('./partials/footer')%>
+</body>
+</html>

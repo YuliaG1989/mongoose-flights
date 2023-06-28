@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<%- include('./partials/head')%>
+  <body>
+    <h1>Mongoose Flights</h1>
+    
+    <a href="/new"><button class='btn btn-primary'>New Flight</button></a>
+
+    <% for( let i = 0; i < data.length; i++ ) { %>
+     <li>Airline : <%= data[i].airline %></li>
+     <li> Airport : <%= data[i].airport %></li>
+     <li>Flight N : <%= data[i].flightNo %></li>
+     <li>Departs on : <%= data[i].departs %></li>
+     <a href='/<%=data[i].id%>'><button class='btn btn-success'>Show Page</button></a>
+    <% } %>
+    
+ <%- include('./partials/footer')%>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head')%>
+<body>
+    <h1>Update</h1>
+    <form action="/<%=data._id%>/edit?_method=PUT" method="POST">
+        <label>Airline</label>
+        <input class = 'form-control'  type='text' name = 'airline'/>
+        <label>Airport</label>
+        <input  class = 'form-control'  type='text' name = 'airport'/>
+        <label>Flight Number</label>
+        <input class = 'form-control'  type='number' name = 'flightNo'/>
+        <label>Departs</label>
+        <input class = 'form-control'  type='date' name = 'departs'/>
+        <input  class='btn btn-success' class = 'form-control' type='submit' value = 'Submit'/>
+      </form>
+
+      <%- include('./partials/footer')%>
+</body>
+</html>
